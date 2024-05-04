@@ -1,14 +1,20 @@
-//
-//  main.cpp
-//  Random
-//
-//  Created by Francesco on 24/03/23.
-//
-
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+void calcola(float litri_vaso);
+
+int main(){
+    float litri;
+    cout<<"Inserisci litri del vaso"<<endl;
+    cin>>litri;
+    calcola(litri);
 }
+
+void calcola(float litri_vaso){
+    float grammi_finali, grammi_base=3000, litri_base=1000;
+    grammi_finali = (grammi_base*litri_vaso)/litri_base;
+    cout<<"Per un vaso da "<<litri_vaso<<" litri, occorrono "<<grammi_finali<<" grammi di NPK Gold ogni 6 mesi"<<endl;
+}
+
+
+
